@@ -1,84 +1,34 @@
 \documentclass[11pt,twoside,a4paper]{scrartcl}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
 
-% Per escriure en català:
-\usepackage[catalan]{babel}
-\usepackage[T1]{fontenc}
-
-\usepackage[labelfont=bf]{caption} %Serveix per a que les llegendes de les taules siguin amb negreta la part Taula 1, Taula 2 ec...
-
-\usepackage{mathpazo}	% Font
-\usepackage{fancyhdr}	% Capçaleres i peus de pàgina
-\fancyhead{}				% Capçalera buida per defecte
-\fancyfoot{}				% Peu de pàgina buit per defecte
-
-% Seccions amb font normal encara que el document sigui de la classe scrartcl
-\usepackage{sectsty}
-\allsectionsfont{\normalfont\bf\renewcommand{\baselinestretch}{2}} 
-
-% Definir línia horitzontal
-\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
-
-\newcommand{\mytitle}{Hola, això és un titol}
-
-% Titol
-\title{	
-\pagestyle{empty}
-\normalfont \normalsize 
-\textsc{} \\ [25pt] 
-\horrule{2pt} \\[0.4cm] % Línia d'adalt
-\Huge \bf \mytitle \\ % Titol
-\horrule{2pt} \\[0.4cm] % Línia d'abaix
-\Large \textsc{Planning and Implementation of Robotic Systems} \\ [25pt]
-}
-
-% Autor
-\author{
-\bf{Jordi Soler Busquets}\\ \small{Master's AiR student, UPC} \\ \small{jordi.solerbusquets@gmail.com} \\ \\}
-\date{\large\today}
+\usepackage{etseib}
+\tfmTitle{Hola, això és un títol}
+\tfmAuthor{Jordi Soler Busquets}{Master Degree in Automatic Control and Robotics}
 
 
 \begin{document}
 %----------------------------------------------------------------------------------------
 %    PORTADA
 %----------------------------------------------------------------------------------------
-\pagestyle{empty}
 \maketitle % Print the title
-\begin{figure}[b]
-  \centering
-     \includegraphics[width=0.7\textwidth]{img/UPC-positiu-p3005.png}
-\end{figure}
+\logoupc
 \thispagestyle{empty}
 \newpage
 
 %--------------------------------------------------------------------------
 %    ÍNDEX
 %--------------------------------------------------------------------------
-\renewcommand{\baselinestretch}{1.5}
 \setcounter{page}{0}
+\pautes
 \tableofcontents
-\fancyfoot[R]{}
-\renewcommand{\footrulewidth}{0pt}
 \newpage
 
 %--------------------------------------------------------------------------
-%    BODY
+%    COS
 %--------------------------------------------------------------------------
-\setcounter{page}{1}
-\pagestyle{fancy}
-\fancyhead[LO,RE]{\thepage}
-\fancyhead[RO,LE]{\mytitle}
-\fancyfoot[LO,RE]{\includegraphics[scale=0.6]{img/etseib.png}}
-
 \section{Introducció}
 Hola 
 
 \section{Primera secció}
-%\label{sec:E1}
 Una secció...
 
 \subsection{Una sub-secció}

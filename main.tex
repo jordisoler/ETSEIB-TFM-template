@@ -1,57 +1,49 @@
 \documentclass[11pt,twoside,a4paper]{scrartcl}
 
 \usepackage{etseib}
+
 \tfmTitle{Hola, això és un títol}
 \tfmAuthor{Jordi Soler Busquets}{Master Degree in Automatic Control and Robotics}
 
 
 \begin{document}
-%----------------------------------------------------------------------------------------
 %    PORTADA
-%----------------------------------------------------------------------------------------
 \maketitle % Print the title
 \logoupc
 \thispagestyle{empty}
 \newpage
-
-%--------------------------------------------------------------------------
-%    ÍNDEX
-%--------------------------------------------------------------------------
-\setcounter{page}{0}
+\pagenumbering{Roman}
+\blank
 \pautes
+
+% 	 RESUM
+\input{tex/resum.tex}
+
+%    ÍNDEX
+%\thispagestyle{empty}
 \tableofcontents
 \newpage
+\pagenumbering{arabic}
 
-%--------------------------------------------------------------------------
-%    COS
-%--------------------------------------------------------------------------
-\section{Introducció}
-Hola 
 
-\section{Primera secció}
-Una secció...
-
-\subsection{Una sub-secció}
-Subsecció
-\subsection{Una altra sub-secció}
-Una altra
+\input{tex/glossari.tex}
+\input{tex/introduccio.tex}
+\input{tex/nucli/nucli.tex}
+\input{tex/planificaio_costos.tex}
+\input{tex/impacte_mediambiental.tex}
 
 \newpage
+\input{tex/conclusions.tex}
 
-%--------------------------------------------------------------------------
-%    CONCLUSIONS
-%--------------------------------------------------------------------------
-\section{Conclusions}
-Conclusions
-
-
-%--------------------------------------------------------------------------
-%    BIBLIOGRAPHY
-%--------------------------------------------------------------------------
 \newpage
-\label{app:bibliography} % Reference the bibliography elsewhere with \autoref{app:bibliography}
+\input{tex/agraiments.tex}
 
-\bibliographystyle{plainnat}
+%    BIBLIOGRAFIA
+\newpage
 
-\bibliography{Bibliography}
+% Segons les pautes de la ETSEIB l'estil de la bibliografia hauria de ser el descrit en la ISO 690:1987. Aquest estil (acm) és el més semblant, tot i que se'n podria crear un de nou...
+\bibliographystyle{acm}
+\bibliography{tex/bibliografia}
+
+
 \end{document}

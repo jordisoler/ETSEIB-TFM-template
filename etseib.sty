@@ -1,6 +1,14 @@
 
 \ProvidesPackage{etseib}
 
+
+% Marges
+\usepackage[top=2.5cm,bottom=2.5cm,left=3cm,right=2cm]{geometry}
+
+% Interliniat
+\renewcommand{\baselinestretch}{1.5}
+
+
 % Paquets generals
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
@@ -9,9 +17,13 @@
 \usepackage{graphicx}
 
 % Per escriure en català:
-\usepackage[catalan]{babel}
+%\usepackage[catalan]{babel}
 \usepackage[T1]{fontenc}
 
+
+\usepackage[nottoc,numbib]{tocbibind} % Afegir bibliografia a l'índex
+
+\usepackage{hyperref}	% Crear hyperlinks automaticament
 
 \usepackage[labelfont=bf]{caption} %Serveix per a que les llegendes de les taules siguin amb negreta la part Taula 1, Taula 2 ec...
 
@@ -27,11 +39,20 @@
 % Definir línia horitzontal
 \newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
 
+% Logo de la UPC
 \newcommand{\logoupc}{
 \begin{figure}[b]
   \centering
      \includegraphics[width=0.7\textwidth]{img/UPC-positiu-p3005.png}
 \end{figure}
+}
+
+% Deixar pàgina totalment en blank
+\newcommand{\blank}{
+	\clearpage
+	\mbox{}
+	\thispagestyle{empty}
+	\clearpage
 }
 
 % Definir títol
@@ -54,7 +75,7 @@
 	\newcommand{\authorname}{#1}
 	\newcommand{\master}{#2}
 	\author{
-	\bf{\authorname}\\ \small{\master student, UPC} \\ 			 			\small{jordi.solerbusquets@gmail.com} \\ \\}
+	\bf{\authorname}\\ \small{\master \ student, UPC} \\ 			 			\small{jordi.solerbusquets@gmail.com} \\ \\}
 }
 
 
